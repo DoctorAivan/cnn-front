@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href='favicon.ico'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CNN Chile - UI 2.0</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+
+    <!-- Menu Movil -->
+    <div class="mobile" id="mobile-menu">
+      <div id="mobile-menu-button">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/image/cnn.png" />
+        </a>
+      </div>
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+      </div>
+    </div>
+
+    <!-- Menu Movil Contenido -->
+    <div class="mobile-content" id="mobile-menu-content">
+
+      <div class="search">
+        <input type="text" placeholder="Buscar" />
+        <div class="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <nav class="menu">
+        <div class="item">
+          <a href="categorias.html">Politíca </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">País </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Mundo </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Economía </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Miradas </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Entretención </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Cultura </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+      </nav>
+
+      <div class="logo">
+        <div class="content">
+          <img src="/image/cnn.png" />
+        </div>
+      </div>
+
+      <div class="follow">
+        Siguenos
+      </div>
+
+      <div class="follow-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="desktop">
+
+      <div class="logo">
+        <a href="index.html"><img src="/image/cnn.png" /></a>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="portadas.html">Portadas</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+      </nav>
+
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+        <span>En vivo</span>
+      </div>
+
+      <div id="desktop-search-ui" class="search-ui">
+        <form action="#">
+          <div class="search-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="appearance-none" type="text" name="s" placeholder="Buscar..." />
+          </div>
+          <button type="submit" class="search-button">Buscar</button>
+          <div onclick="seach_ui()" class="search-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </form>
+      </div>
+
+      <div onclick="seach_ui()" class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+    </div>
+
+  </header>
+  
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Barra Breaking News -->
+    <div class="breaking-news">
+      <a href="liveblog.html">
+        <div class="breaking-news-content">
+          <div class="read">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="breaking">
+            <i class="fa-solid fa-circle-exclamation"></i> <span>BREAKING NEWS</span>
+          </div>
+          <div class="description">
+            Joe Biden asegura tener intención de postularse a la reelección en 2024
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot !-mb-5">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+    
+    <!-- En vivo Gris collapse h-0 -->
+    <div class="content-on-air collapse h-0" id="live">
+      <div class="content-on-air-bg">
+        <div class="content-on-air-bg-grid">
+
+          <!-- Player-->
+          <div class="player">
+            <iframe id="youTubeLive" src="https://www.youtube.com/embed/c9G7xXCsRv4?enablejsapi=1&html5=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+
+          <!-- Información-->
+          <div class="information">
+
+            <div class="information-title">
+              <h2><i class="fa-solid fa-tv"></i> EN VIVO</h2>
+              <h3>INTERNACIONAL</h3>
+            </div>
+
+            <div class="information-details">
+              <a href="notas.html">
+                <h2>Liz Truss renuncia como primera ministra de Reino Unido</h2>
+              </a>
+              <p>La situación ocurre después de que más de sus propios legisladores pidieran su dimisión, indignados por una votación parlamentaria caótica y la dimisión de Suella Braverman.</p>
+            </div>
+
+            <div class="information-related">
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Principal -->
+    <div class="content-block-1fr-300-300">
+
+      <!-- Publicidad -->
+      <div id="skyscraper-left" class="content-ad-slot-skyscraper-left">
+        AD SLOT
+      </div>
+
+      <!-- Publicidad -->
+      <div id="skyscraper-right" class="content-ad-slot-skyscraper-right">
+        AD SLOT
+      </div>
+
+      <!-- Primera Columna Componente -->
+      <div class="space-y-4 mx-4 sm:mx-0">
+
+        <!-- Destacado Principal -->
+        <div class="article">
+          <figure class="aspect-video">
+            <span><i class="fa-solid fa-circle animate-alarm"></i> MINUTO A MINUTO</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221003140825-risk-takers-4dww-2-full-169.jpg?quality=100&strip=info&w=780&h=438&crop=1" />
+          </figure>
+          <article class="big">
+            <a href="liveblog.html">
+              <h2>La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</h2>
+            </a>
+            <p>El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.</p>
+          </article>
+        </div>
+
+        <!-- Relacionados -->
+        <div class="article-list">
+
+          <div class="item border-bottom">
+            <figure>
+              <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+            </figure>
+            <article>
+              <h3>DEPORTES</h3>
+              <a href="notas.html">
+                <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article>
+              <h3>INMIGRACIÓN</h3>
+              <a href="notas.html">
+                <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+            </figure>
+            <article>
+              <h3>ECONOMÍA</h3>
+              <a href="notas.html">
+                <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+            </figure>
+            <article >
+              <h3>AUTOS</h3>
+              <a href="notas.html">
+                <h2>Desarrollan camiones mineros de cero emisiones</h2>
+              </a>
+            </article>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <!-- Titulo -->
+      <div class="title sm:!hidden mx-4">
+        <h2>DESTACADOS</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Segunda Columna Componente -->
+      <div class="article-list mx-4 sm:mx-0">
+
+        <div class="article border-bottom">
+          <figure>
+            <span>RECIENTES</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+          </article>
+        </div>
+
+        <div class="article border-bottom">
+          <figure>
+            <span>LITERATURA</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+            </a>
+          </article>
+        </div>
+
+        <div class="article border-bottom">
+          <figure>
+            <span>COLOMBIA</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/07/151117122621-getty-colombian-pesos-and-dollars-full-169.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Nuevo récord del dólar en Colombia. ¿Por qué sube tanto frente al peso?</h2>
+            </a>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Tercera Columna Componente -->
+      <div class="article-list mx-4 sm:mx-0">
+
+        <!-- Destacado Oscuro -->
+        <div class="article-dark">
+          <figure>
+            <span>RECIENTES</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+            <p>Nintendo, la gigante empresa japonesa de desarrollo y distribución de videojuegos, hizo oficial este 6 de octubre el primer tráiler de la nueva película de animación.</p>
+          </article>
+        </div>
+
+        <!-- Titulo -->
+        <div class="title">
+          <h2>LO MÁS NUEVO</h2>
+          <h3>
+            <a href="notas.html">
+              VER MÁS <i class="fa-solid fa-circle-plus"></i>
+            </a>
+          </h3>
+        </div>
+
+        <!-- Relacionados -->
+        <div class="article-list">
+
+          <div class="item poster-small border-bottom">
+            <figure>
+              <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+            </figure>
+            <article>
+              <h3>DEPORTES</h3>
+              <a href="notas.html">
+                <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster-small border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article>
+              <h3>INMIGRACIÓN</h3>
+              <a href="notas.html">
+                <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster-small border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+            </figure>
+            <article>
+              <h3>ECONOMÍA</h3>
+              <a href="notas.html">
+                <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster-small border-bottom">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+            </figure>
+            <article >
+              <h3>AUTOS</h3>
+              <a href="notas.html">
+                <h2>Desarrollan camiones mineros de cero emisiones</h2>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Contenido 3 Bloques + Publicidad -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>VIAJES Y TURISMO</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Bloques -->
+      <div class="content-block-1fr-300-300">
+
+        <!-- Destacado -->
+        <div class="space-y-4">
+
+          <!-- Destacado Oscuro -->
+          <div class="article-dark">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+              <p>Nintendo, la gigante empresa japonesa de desarrollo y distribución de videojuegos, hizo oficial este 6 de octubre el primer tráiler de la nueva película de animación.</p>
+            </article>
+          </div>
+
+          <!-- Contenedor Doble -->
+          <div class="content-block-1fr-1fr">
+
+            <div class="article">
+              <figure>
+                <span>LITERATURA</span>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+              </figure>
+              <article>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="article">
+              <figure>
+                <span>LITERATURA</span>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+              </figure>
+              <article>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Listado Destacado y 3 Articulos -->
+        <div class="space-y-4 order-3 sm:order-none">
+
+          <!-- Destacado -->
+          <div class="article border-bottom">
+            <figure>
+              <span>LITERATURA</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+          <!-- Relacionados -->
+          <div class="article-list">
+
+            <div class="item poster-small border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+              </figure>
+              <article>
+                <h3>DEPORTES</h3>
+                <a href="notas.html">
+                  <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster-small border-bottom">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+              </figure>
+              <article>
+                <h3>INMIGRACIÓN</h3>
+                <a href="notas.html">
+                  <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster-small border-bottom">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+              </figure>
+              <article>
+                <h3>ECONOMÍA</h3>
+                <a href="notas.html">
+                  <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster-small border-bottom">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+              </figure>
+              <article >
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Desarrollan camiones mineros de cero emisiones</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Publicidad -->
+        <div class="flex h-[250px] sm:h-[600px] bg-slate-300 text-slate-600 justify-center items-center">
+          AD SLOT
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Contenido Bloque 4 -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>ENTRETENIMIENTO</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Contenido -->
+      <div class="content-block-4 slider">
+
+        <div class="article-image slider-big-item aspect-square">
+          <a href="#">
+            <div class="background">
+              <article>
+                <span>REDES SOCIALES</span>
+                <h2>Espalda rota, rodilla dislocada, tobillo torcido: lo que dejó Twitchcon</h2>
+              </article>
+            </div>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011185432-twitchcon-injuries-foam-pit-lenovo-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+          </a>
+        </div>
+
+        <div class="article-image slider-big-item aspect-square">
+          <a href="#">
+            <div class="background">
+              <article>
+                <span>CELEBRIDADES</span>
+                <h2>Angela Lansbury, estrella de 'Murder, She Wrote', muere a los 96 años</h2>
+              </article>
+            </div>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/CNN-Lansbury.jpeg?quality=100&strip=info&w=300&h=170&crop=1" />
+          </a>
+        </div>
+        
+        <div class="article-image slider-big-item aspect-square">
+          <a href="#">
+            <div class="background">
+              <article>
+                <span>MEXICO</span>
+                <h2>Mira al bebé cargado por la multitud hasta llegar a "The Rock"</h2>
+              </article>
+            </div>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011131409-dwayne-johnson-with-crowd-surfed-baby-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+          </a>
+        </div>
+
+        <div class="article-image slider-big-item aspect-square">
+          <a href="#">
+            <div class="background">
+              <article>
+                <span>CELEBRIDADES</span>
+                <h2>Madonna deja intrigados a muchos por un video suyo en TikTok</h2>
+              </article>
+            </div>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221010154337-madonna-tiktok-gay-showbiz-00001330-full-169-e1665443221236.png?w=300&h=170&crop=1" />
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Contenido 2 Bloques - 5 Articulos -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>VIDEOS DEL DÍA</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Bloque de Contenido 4 Cajas -->
+      <div class="space-y-4">
+
+        <!-- Dos Destacados -->
+        <div class="content-block-2">
+
+          <div class="article-image aspect-video">
+            <a href="#">
+              <div class="background big">
+                <figure>
+                  <i class="fa-regular fa-circle-play"></i>
+                </figure>
+                <article>
+                  <span>GUERRA</span>
+                  <h2>Lo que revela el primer tráiler oficial de 'The Super Mario Bros. Movie'</h2>
+                </article>
+              </div>
+              <img class="aspect-video" src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </a>
+          </div>
+
+          <div class="article-image aspect-video">
+            <a href="#">
+              <div class="background big">
+                <figure>
+                  <i class="fa-regular fa-circle-play"></i>
+                </figure>
+                <article>
+                  <span>GUERRA</span>
+                  <h2>Precios del gas afectan al Balneario Miskolc Tapolca en Hungría</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/140626072101-hungary-spas-full-169.jpg?quality=100&strip=info&w=780&h=438&crop=1" />
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Listado 5 Articulos -->
+        <div class="content-block-5 slider">
+
+          <div class="article slider-item">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article>
+              <h3>LITERATURA</h3>
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="article slider-item">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article>
+              <h3>LITERATURA</h3>
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="article slider-item">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article>
+              <h3>LITERATURA</h3>
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="article slider-item">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article>
+              <h3>LITERATURA</h3>
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="article slider-item">
+            <figure>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&strip=info&w=460&h=260&crop=1" />
+            </figure>
+            <article>
+              <h3>LITERATURA</h3>
+              <a href="notas.html">
+                <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <!-- Contenido Publicidad 3 Bloques  -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>MUNDIAL DE QATAR 2022</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Dos Destacados -->
+      <div class="content-block-300-1fr">
+
+        <!-- Publicidad -->
+        <div class="flex h-[250px] bg-slate-300 text-slate-600 justify-center items-center">
+          AD SLOT
+        </div>
+
+        <!-- Contenido -->
+        <div class="content-block-3 slider">
+
+          <div class="article-image slider-big-item aspect-square">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>ARGENTINA</span>
+                  <h2>Ángel Di María y Paulo Dybala se podrían quedar fuera de Qatar 2022</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011172141-deportes-di-maria-injury-champions-league-full-169.jpg?quality=100&strip=info&w=780&h=438&crop=1" />
+            </a>
+          </div>
+
+          <div class="article-image slider-big-item aspect-square">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>ESPAÑA</span>
+                  <h2>Diego Alonso: Uruguay está para ganar el Mundial</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221008170933-deportes-diego-alonso-pic-deportes-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+            </a>
+          </div>
+
+          <div class="article-image slider-big-item aspect-square">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>ARGENTINA</span>
+                  <h2>Messi piensa en su quinto y, quizás, último Mundial</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/messi-ultimo-mundial.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Contenido Bloque 4 -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>VIAJES Y TURISMO</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Listado 5 Articulos -->
+      <div class="content-block-4 slider">
+
+        <div class="article slider-big-item">
+          <figure>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <h3>PETRÓLEO</h3>
+            <a href="notas.html">
+              <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+            </a>
+          </article>
+        </div>
+
+        <div class="article slider-big-item">
+          <figure>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006205253-diego-el-cigala-1-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+          </figure>
+          <article class="medium">
+            <h3>ENTRETENIMIENTO</h3>
+            <a href="notas.html">
+              <h2>Diego "El Cigala" recuerda el concierto más difícil de su vida</h2>
+            </a>
+          </article>
+        </div>
+
+        <div class="article slider-big-item">
+          <figure>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221004214118-02-hans-niemann-investigation.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <h3>DEPORTES</h3>
+            <a href="notas.html">
+              <h2>Acusan a gran maestro de ajedrez Hans Niemann de hacer trampa en línea</h2>
+            </a>
+          </article>
+        </div>
+
+        <div class="article slider-big-item">
+          <figure>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <h3>NOTICIAS RECIENTES</h3>
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+          </article>
+        </div>
+  
+      </div>
+
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Contenido Bloque 3 más Listas -->
+    <div class="content">
+      <div class="content-block-3">
+
+        <div class="space-y-4">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>SALUD</h2>
+            <h3>
+              <a href="notas.html" class="sm:hidden">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
+          </div>
+
+          <!-- Destacado -->
+          <div class="article border-bottom">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+            </article>
+          </div>
+
+          <!-- Relacionados -->
+          <div class="article-list">
+
+            <div class="item poster border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+              </figure>
+              <article>
+                <h3>DEPORTES</h3>
+                <a href="notas.html">
+                  <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+              </figure>
+              <article>
+                <h3>INMIGRACIÓN</h3>
+                <a href="notas.html">
+                  <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+              </figure>
+              <article>
+                <h3>ECONOMÍA</h3>
+                <a href="notas.html">
+                  <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+              </figure>
+              <article >
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Desarrollan camiones mineros de cero emisiones</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>VIAJES</h2>
+            <h3>
+              <a href="notas.html" class="sm:hidden">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
+          </div>
+
+          <!-- Destacado -->
+          <div class="article border-bottom">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+            </article>
+          </div>
+
+          <!-- Relacionados -->
+          <div class="article-list">
+
+            <div class="item poster border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+              </figure>
+              <article>
+                <h3>DEPORTES</h3>
+                <a href="notas.html">
+                  <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+              </figure>
+              <article>
+                <h3>INMIGRACIÓN</h3>
+                <a href="notas.html">
+                  <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+              </figure>
+              <article>
+                <h3>ECONOMÍA</h3>
+                <a href="notas.html">
+                  <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+              </figure>
+              <article >
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Desarrollan camiones mineros de cero emisiones</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+    
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>LATINO AMERICA</h2>
+            <h3>
+              <a href="notas.html" class="sm:hidden">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
+          </div>
+
+          <!-- Destacado -->
+          <div class="article border-bottom">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+            </article>
+          </div>
+
+          <!-- Relacionados -->
+          <div class="article-list">
+
+            <div class="item poster border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+              </figure>
+              <article>
+                <h3>DEPORTES</h3>
+                <a href="notas.html">
+                  <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+              </figure>
+              <article>
+                <h3>INMIGRACIÓN</h3>
+                <a href="notas.html">
+                  <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&strip=info&w=300&h=170&crop=1" />
+              </figure>
+              <article>
+                <h3>ECONOMÍA</h3>
+                <a href="notas.html">
+                  <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&strip=info&w=352&h=199&crop=1" />
+              </figure>
+              <article >
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Desarrollan camiones mineros de cero emisiones</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+    
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Bloque de Programas -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>PROGRAMAS DE TV</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Programas -->
+      <div class="tv-shows">
+
+        <div class="show">
+          <h2>TOLERANCIA CERO</h2>
+          <h4><i class="fa-regular fa-clock"></i> DOMINGOS 22:30</h4>
+          <img src="https://pbs.twimg.com/profile_images/1348750511592321033/W0DYIgzG_400x400.jpg" />
+          <h3>Daniel Matamala</h3>
+        </div>
+
+        <div class="show">
+          <h2>AQUÍ SE DEBATE</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 22:30</h4>
+          <img src="http://1.bp.blogspot.com/_d_IZbuJtMRU/S5pAlWsrV1I/AAAAAAAABQo/swoYaPcpdlw/s400/rincon2.jpg" />
+          <h3>Monica Rincón</h3>
+        </div>
+
+        <div class="show">
+          <h2>HOY ES NOTICIA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MARTES Y JUEVES 19:00</h4>
+          <img src="https://pbs.twimg.com/profile_images/1279061223955406854/RT7NZlvI_400x400.jpg" />
+          <h3>Matilde Burgos</h3>
+        </div>
+
+        <div class="show">
+          <h2>ÚLTIMA MIRADA</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 23:30</h4>
+          <img src="https://s3.amazonaws.com/storage.wobiz.com/9/9041/images/Large/1467306198_96647b11b71854455f2250e1d54736c1.9041.jpeg" />
+          <h3>Fernando Paulsen</h3>
+        </div>
+
+        <div class="show">
+          <h2>AGENDA ECONÓMICA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MIERCOLES 18:00</h4>
+          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHeiDI3da2w6w/profile-displayphoto-shrink_200_200/0/1625593808730?e=1669248000&v=beta&t=agseGgn4tlayqDkIHI5eia4Raa1OqI7RGPDlnF7Rk9o" />
+          <h3>Nicolás Paut</h3>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <div class="content">
+
+      <div class="logo">
+        <div class="logo-line"></div>
+        <div class="logo-image">
+          <a href="index.html">
+            <img src="/image/cnn.png" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="categorias.html">Politíca</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Tendencias</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Especiales</a>
+        </li>
+      </nav>
+
+      <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Base Script -->
+  <script type="text/javascript" src='/cnn.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href='favicon.ico'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CNN Chile - UI 2.0</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+
+    <!-- Menu Movil -->
+    <div class="mobile" id="mobile-menu">
+      <div id="mobile-menu-button">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/image/cnn.png" />
+        </a>
+      </div>
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+      </div>
+    </div>
+
+    <!-- Menu Movil Contenido -->
+    <div class="mobile-content" id="mobile-menu-content">
+
+      <nav class="menu">
+        <div class="item">
+          <a href="categorias.html">Politíca </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">País </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Mundo </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Economía </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Miradas </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Entretención </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Cultura </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+      </nav>
+
+      <div class="logo">
+        <div class="content">
+          <img src="/image/cnn.png" />
+        </div>
+      </div>
+
+      <div class="follow">
+        Siguenos
+      </div>
+
+      <div class="follow-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="desktop">
+
+      <div class="logo">
+        <a href="index.html"><img src="/image/cnn.png" /></a>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="portadas.html">Portadas</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+      </nav>
+
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+        <span>En vivo</span>
+      </div>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Barra Breaking News -->
+    <div class="breaking-news">
+      <a href="liveblog.html">
+        <div class="breaking-news-content">
+          <div class="read">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="breaking">
+            <i class="fa-solid fa-circle-exclamation"></i> <span>BREAKING NEWS</span>
+          </div>
+          <div class="description">
+            Joe Biden asegura tener intención de postularse a la reelección en 2024
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot !-mb-5">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+    
+    <!-- En vivo -->
+    <div class="content-on-air collapse h-0" id="live">
+      <div class="content-on-air-bg">
+        <div class="content-on-air-bg-grid">
+
+          <!-- Player-->
+          <div class="player">
+            <iframe id="youTubeLive" src="https://www.youtube.com/embed/c9G7xXCsRv4?enablejsapi=1&html5=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+
+          <!-- Información-->
+          <div class="information">
+
+            <div class="information-title">
+              <h2><i class="fa-solid fa-tv"></i> EN VIVO</h2>
+              <h3>INTERNACIONAL</h3>
+            </div>
+
+            <div class="information-details">
+              <a href="notas.html">
+                <h2>Liz Truss renuncia como primera ministra de Reino Unido</h2>
+              </a>
+              <p>La situación ocurre después de que más de sus propios legisladores pidieran su dimisión, indignados por una votación parlamentaria caótica y la dimisión de Suella Braverman.</p>
+            </div>
+
+            <div class="information-related">
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Titulo Sección -->
+    <div class="title-section">
+      <div class="content">
+
+        <!-- Publicidad -->
+        <div id="skyscraper-left" class="content-ad-slot-skyscraper-left">
+          AD SLOT
+        </div>
+
+        <!-- Publicidad -->
+        <div id="skyscraper-right" class="content-ad-slot-skyscraper-right">
+          AD SLOT
+        </div>
+
+        <!-- Información -->
+        <div class="data">
+
+          <div class="name">
+            <i class="fa-solid fa-circle animate-alarm"></i> MINUTO A MINUTO
+          </div>
+
+          <div class="icon-mobile">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          </div>
+
+          <div class="icon">
+            <span>Compartir</span>
+            <i class="fa-brands fa-square-whatsapp"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Live Blog -->
+    <div class="live-blog">
+
+      <div class="live-blog-bg">
+        <div class="live-blog-content">
+          <div class="article-details mr-5">
+            <h3>Joe Biden asegura tener intención de postularse a la reelección en 2024</h3>
+            <p class="epigraph line-clamp-4">En entrevista, el actual Mandatario manifestó que si buen "no ha tomado esa decisión formalmente" tiene la energía para cumplir con un segundo periodo.</p>
+
+            <div class="author">
+              <div class="share col-span-2">
+                <span>Compartir</span>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+              </div>
+            </div>
+          </div>
+          <div class="media">
+              <iframe src="https://www.youtube.com/embed/AC7nnoFKZTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor 300px - 1fr -->
+      <div class="relative content-block-300-1fr pt-5">
+
+        <!-- Columna Derecha -->
+        <div class="space-y-4 order-2 sm:order-1">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2><i class="fa-solid fa-bookmark"></i> LO QUE SABEMOS</h2>
+            <h3></h3>
+          </div>
+
+          <!-- Contenido -->
+          <div class="article-details live-blog-item">
+            <ul>
+              <li>Si fuera reelecto, terminaría su segundo mandato con 86 años.</li>
+              <li>"Mi esposa cree que estamos haciendo algo muy importante y que no debería negarme ( a postularme nuevamente )"</li>
+              <li>Tras la visita del secretario de Estado norteamericano, Antony Blinken, se activaron los preparativos para conmemorar el hito, con actividades culturales y comerciales tanto en Washington como en Santiago.</li>
+            </ul>
+          </div>
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>RELACIONADOS</h2>
+            <h3></h3>
+          </div>
+
+          <!-- Notas Relacionadas -->
+          <div class="slider">
+
+            <div class="article-image slider-big-item aspect-square sm:aspect-video">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>REDES SOCIALES</span>
+                    <h2>Espalda rota, rodilla dislocada, tobillo torcido: lo que dejó Twitchcon</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011185432-twitchcon-injuries-foam-pit-lenovo-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+            <div class="article-image slider-big-item aspect-square sm:aspect-video">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>CELEBRIDADES</span>
+                    <h2>Angela Lansbury, estrella de 'Murder, She Wrote', muere a los 96 años</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/CNN-Lansbury.jpeg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+            
+            <div class="article-image slider-big-item aspect-square sm:aspect-video">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>MEXICO</span>
+                    <h2>Mira al bebé cargado por la multitud hasta llegar a "The Rock"</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011131409-dwayne-johnson-with-crowd-surfed-baby-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+            <div class="article-image slider-big-item aspect-square sm:aspect-video">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>CELEBRIDADES</span>
+                    <h2>Madonna deja intrigados a muchos por un video suyo en TikTok</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221010154337-madonna-tiktok-gay-showbiz-00001330-full-169-e1665443221236.png?w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+          </div>
+
+          <!-- Publicidad -->
+          <div class="flex h-[250px] bg-slate-300 text-slate-600 justify-center items-center">
+            300 x 250
+          </div>
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>DESTACAMOS</h2>
+            <h3></h3>
+          </div>
+
+          <!-- Destacado Oscuro -->
+          <div class="article-dark">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+              <p>Nintendo, la gigante empresa japonesa de desarrollo y distribución de videojuegos, hizo oficial este 6 de octubre el primer tráiler de la nueva película de animación.</p>
+            </article>
+          </div>
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>LO ÚLTIMO</h2>
+            <h3>
+              <a href="notas.html">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
+          </div>
+
+          <!-- Destacado -->
+          <div class="article border-bottom">
+            <figure>
+              <span>RECIENTES</span>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article class="medium">
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+            </article>
+          </div>
+
+          <!-- Listado de Noticias-->
+          <div class="article-list">
+
+            <div class="item poster border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+              </figure>
+              <article>
+                <h3>DEPORTES</h3>
+                <a href="notas.html">
+                  <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&amp;strip=info&amp;w=1024">
+              </figure>
+              <article>
+                <h3>INMIGRACIÓN</h3>
+                <a href="notas.html">
+                  <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </figure>
+              <article>
+                <h3>ECONOMÍA</h3>
+                <a href="notas.html">
+                  <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&amp;strip=info&amp;w=352&amp;h=199&amp;crop=1">
+              </figure>
+              <article>
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Desarrollan camiones mineros de cero emisiones</h2>
+                </a>
+              </article>
+            </div>
+
+            <div class="item poster border-bottom">
+              <figure class="aspect-video">
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+              </figure>
+              <article>
+                <h3>AUTOS</h3>
+                <a href="notas.html">
+                  <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+
+          <!-- Publicidad -->
+          <div class="flex h-[250px] sm:h-[600px] bg-slate-300 text-slate-600 justify-center items-center">
+            <div class="sm:hidden">300 x 250</div>
+            <div class="hidden sm:block">300 x 600</div>
+          </div>
+
+        </div>
+
+        <!-- Columna Izquierda -->
+        <div class="space-y-4 order-1 sm:order-2 pb-5">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2><i class="fa-regular fa-clipboard"></i> ARTICULOS: 15</h2>
+            <h3>ACTUALIZAR <i class="fa-solid fa-rotate-right"></i></h3>
+          </div>
+
+          <div class="article-details live-blog-item">
+
+            <!-- Fecha y Autor -->
+            <div class="published">
+              <div class="date"><i class="fa-solid fa-clock"></i> Hace 45 Minutos</div>
+              <div class="name"><i class="fa-regular fa-user"></i> Por Julia Kesaieva</div>
+            </div>
+
+            <!-- Titulo -->
+            <h2 class="live-blog-item-title">Soldados rusos denuncian una "batalla incomprensible" en la que habrían muerto 300 personas en Donetsk</h2>
+
+            <!-- Contenido Multimedia -->
+            <div class="media">
+              <img src="https://media.cnnchile.com/sites/2/2022/11/TWITTER-740x430.jpg" />
+              <p>Las fuerzas ucranianas disparan una ronda de obús hacia las posiciones rusas en el óblast de Donetsk este martes. (Crédito: Oleksandr Ratushniak/Reuters)</p>
+            </div>
+
+            <!-- Epigrafé -->
+            <p class="epigraph">Este martes se conmemora el tercer aniversario del estallido social. Con el fin de evitar incidentes y problemas en servicios, autoridades y gremios han implementado planes de contingencia para la jornada. Desde el Gobierno llamaron a manifestarse de forma tranquila y respetando la seguridad y el orden público.</p>
+
+            <!-- Parrafo Destacado -->
+            <div class="quote quote-left">
+              <h2>
+                <i class="fa-solid fa-quote-left"></i>
+                La arriesgada jugada de Ana Lya Uriarte en la Cámara: De la caída de Cariola al triunfo de Mirosevic.
+                <i class="fa-solid fa-quote-right"></i>
+              </h2>
+              <h3>Valentín Trujillo Sánchez</h3>
+              <h4>2 de mayo de 1933</h4>
+            </div>
+
+            <!-- Parrafos -->
+            <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+            <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+            <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+            <ul>
+              <li>Altos funcionarios estadounidenses instaron en las últimas semanas a Ucrania a que señale que sigue abierta a las conversaciones diplomáticas con Rusia, según dijeron las fuentes a CNN.</li>
+              <li>Los soldados rusos se han quejado de haber sido enviados a una "batalla incomprensible" en la región de Donetsk. El presidente de Ucrania, Volodymyr Zelensky, dijo que Moscú había sufrido grandes pérdidas en la región oriental.</li>
+              <li>El Estado Mayor General de las Fuerzas Armadas dijo este martes que "el enemigo continúa recurriendo al saqueo y la destrucción de la infraestructura civil en los territorios temporalmente ocupados de la región de Jersón".</li>
+            </ul>
+
+          </div>
+
+          <div class="article-details live-blog-item">
+
+            <!-- Fecha y Autor -->
+            <div class="published">
+              <div class="date"><i class="fa-solid fa-clock"></i> Hace 45 Minutos</div>
+              <div class="name"><i class="fa-regular fa-user"></i> Por Julia Kesaieva</div>
+            </div>
+
+            <!-- Titulo -->
+            <h2 class="live-blog-item-title">Soldados rusos denuncian una "batalla incomprensible" en la que habrían muerto 300 personas en Donetsk</h2>
+
+            <!-- Contenido Externo -->
+            <div class="external">
+              <blockquote class="twitter-tweet"><p lang="es" dir="ltr">🔴 AHORA | Pdte. Boric se refiere al tercer aniversario del estallido social: “Ya es tiempo de que salgamos de nuestra zona de confort para interpretar lo que pasó, las lecciones que debemos sacar del proceso y actuar” <br><br>📡 En vivo: <a href="https://t.co/Esutw9Kn05">https://t.co/Esutw9Kn05</a> <a href="https://twitter.com/hashtag/NoticiasExpressCNN?src=hash&amp;ref_src=twsrc%5Etfw">#NoticiasExpressCNN</a> <a href="https://t.co/7x3GwIdsaO">pic.twitter.com/7x3GwIdsaO</a></p>&mdash; CNN Chile (@CNNChile) <a href="https://twitter.com/CNNChile/status/1582348858155147264?ref_src=twsrc%5Etfw">October 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <!-- Epigrafé -->
+            <p class="epigraph">Las tropas rusas han denunciado una "batalla incomprensible" en Donetsk después de sufrir aparentemente grandes pérdidas durante una semana de intensos combates en la región clave del este de Ucrania.</p>
+
+            <!-- Parrafo Destacado -->
+            <div class="quote quote-right">
+              <h2>
+                <i class="fa-solid fa-quote-left"></i>
+                La arriesgada jugada de Ana Lya Uriarte en la Cámara: De la caída de Cariola al triunfo de Mirosevic.
+                <i class="fa-solid fa-quote-right"></i>
+              </h2>
+              <h3>Valentín Trujillo Sánchez</h3>
+              <h4>2 de mayo de 1933</h4>
+            </div>
+
+            <!-- Parrafos -->
+            <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+            <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+            <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+          </div>
+
+          <!-- Publicidad -->
+          <div class="ad-container">
+            AD SLOT
+          </div>
+
+          <div class="article-details live-blog-item">
+
+            <!-- Fecha y Autor -->
+            <div class="published">
+              <div class="date"><i class="fa-solid fa-clock"></i> Hace 45 Minutos</div>
+              <div class="name"><i class="fa-regular fa-user"></i> Por Julia Kesaieva</div>
+            </div>
+
+            <!-- Titulo -->
+            <h2 class="live-blog-item-title">Bukele afirma que organismos internacionales "bloquean" el combate contra las pandillas en El Salvador</h2>
+
+            <!-- Contenido Multimedia -->
+            <div class="media">
+              <img src="https://static.emol.cl/emol50/Fotos/2022/11/09/file_20221109235246.jpg" />
+              <p>Las fuerzas ucranianas disparan una ronda de obús hacia las posiciones rusas en el óblast de Donetsk este martes. (Crédito: Oleksandr Ratushniak/Reuters)</p>
+            </div>
+
+            <!-- Epigrafé -->
+            <p class="epigraph">Este martes se conmemora el tercer aniversario del estallido social. Con el fin de evitar incidentes y problemas en servicios, autoridades y gremios han implementado planes de contingencia para la jornada. Desde el Gobierno llamaron a manifestarse de forma tranquila y respetando la seguridad y el orden público.</p>
+
+            <!-- Parrafo Destacado -->
+            <div class="quote quote-right">
+              <h2>
+                <i class="fa-solid fa-quote-left"></i>
+                La arriesgada jugada de Ana Lya Uriarte en la Cámara: De la caída de Cariola al triunfo de Mirosevic.
+                <i class="fa-solid fa-quote-right"></i>
+              </h2>
+              <h3>Valentín Trujillo Sánchez</h3>
+              <h4>2 de mayo de 1933</h4>
+            </div>
+
+            <!-- Parrafos -->
+            <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+            <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+
+          </div>
+
+          <div class="article-details live-blog-item">
+
+            <!-- Fecha y Autor -->
+            <div class="published">
+              <div class="date"><i class="fa-solid fa-clock"></i> Hace 45 Minutos</div>
+              <div class="name"><i class="fa-regular fa-user"></i> Por Julia Kesaieva</div>
+            </div>
+
+            <!-- Titulo -->
+            <h2 class="live-blog-item-title">Soldados rusos denuncian una "batalla incomprensible" en la que habrían muerto 300 personas en Donetsk</h2>
+
+            <!-- Contenido Multimedia video -->
+            <div class="media">
+              <iframe src="https://www.youtube.com/embed/AC7nnoFKZTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Epigrafé -->
+            <p class="epigraph">Las tropas rusas han denunciado una "batalla incomprensible" en Donetsk después de sufrir aparentemente grandes pérdidas durante una semana de intensos combates en la región clave del este de Ucrania.</p>
+
+            <!-- Parrafos -->
+            <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot hidden sm:block">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Bloque de Programas -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>PROGRAMAS DE TV</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Programas -->
+      <div class="tv-shows">
+
+        <div class="show">
+          <h2>TOLERANCIA CERO</h2>
+          <h4><i class="fa-regular fa-clock"></i> DOMINGOS 22:30</h4>
+          <img src="https://pbs.twimg.com/profile_images/1348750511592321033/W0DYIgzG_400x400.jpg" />
+          <h3>Daniel Matamala</h3>
+        </div>
+
+        <div class="show">
+          <h2>AQUÍ SE DEBATE</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 22:30</h4>
+          <img src="http://1.bp.blogspot.com/_d_IZbuJtMRU/S5pAlWsrV1I/AAAAAAAABQo/swoYaPcpdlw/s400/rincon2.jpg" />
+          <h3>Monica Rincón</h3>
+        </div>
+
+        <div class="show">
+          <h2>HOY ES NOTICIA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MARTES Y JUEVES 19:00</h4>
+          <img src="https://pbs.twimg.com/profile_images/1279061223955406854/RT7NZlvI_400x400.jpg" />
+          <h3>Matilde Burgos</h3>
+        </div>
+
+        <div class="show">
+          <h2>ÚLTIMA MIRADA</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 23:30</h4>
+          <img src="https://s3.amazonaws.com/storage.wobiz.com/9/9041/images/Large/1467306198_96647b11b71854455f2250e1d54736c1.9041.jpeg" />
+          <h3>Fernando Paulsen</h3>
+        </div>
+
+        <div class="show">
+          <h2>AGENDA ECONÓMICA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MIERCOLES 18:00</h4>
+          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHeiDI3da2w6w/profile-displayphoto-shrink_200_200/0/1625593808730?e=1669248000&v=beta&t=agseGgn4tlayqDkIHI5eia4Raa1OqI7RGPDlnF7Rk9o" />
+          <h3>Nicolás Paut</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <div class="content">
+
+      <div class="logo">
+        <div class="logo-line"></div>
+        <div class="logo-image">
+          <a href="index.html">
+            <img src="/image/cnn.png" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="categorias.html">Politíca</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Tendencias</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Especiales</a>
+        </li>
+      </nav>
+
+      <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Base Script -->
+  <script type="text/javascript" src='/cnn.js'></script>
+
+</body>
+
+</html>

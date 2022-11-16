@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href='favicon.ico'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CNN Chile - UI 2.0</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header">
+
+    <!-- Menu Movil -->
+    <div class="mobile" id="mobile-menu">
+      <div id="mobile-menu-button">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="/image/cnn.png" />
+        </a>
+      </div>
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+      </div>
+    </div>
+
+    <!-- Menu Movil Contenido -->
+    <div class="mobile-content" id="mobile-menu-content">
+
+      <nav class="menu">
+        <div class="item">
+          <a href="categorias.html">Politíca </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">País </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Mundo </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Economía </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Miradas </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Entretención </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Cultura </a>
+        </div>
+        <div class="item">
+          <a href="categorias.html">Deportes </a>
+        </div>
+      </nav>
+
+      <div class="logo">
+        <div class="content">
+          <img src="/image/cnn.png" />
+        </div>
+      </div>
+
+      <div class="follow">
+        Siguenos
+      </div>
+
+      <div class="follow-icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="desktop">
+
+      <div class="logo">
+        <a href="index.html"><img src="/image/cnn.png" /></a>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="portadas.html">Portadas</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+      </nav>
+
+      <div class="on-air" onclick="liveStatus()">
+        <i class="fa-solid fa-display"></i>
+        <span>En vivo</span>
+      </div>
+
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot -mb-5">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+    
+    <!-- En vivo -->
+    <div class="content-on-air collapse h-0" id="live">
+      <div class="content-on-air-bg">
+        <div class="content-on-air-bg-grid">
+
+          <!-- Player-->
+          <div class="player">
+            <iframe id="youTubeLive" src="https://www.youtube.com/embed/c9G7xXCsRv4?enablejsapi=1&html5=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+
+          <!-- Información-->
+          <div class="information">
+
+            <div class="information-title">
+              <h2><i class="fa-solid fa-tv"></i> EN VIVO</h2>
+              <h3>INTERNACIONAL</h3>
+            </div>
+
+            <div class="information-details">
+              <a href="notas.html">
+                <h2>Liz Truss renuncia como primera ministra de Reino Unido</h2>
+              </a>
+              <p>La situación ocurre después de que más de sus propios legisladores pidieran su dimisión, indignados por una votación parlamentaria caótica y la dimisión de Suella Braverman.</p>
+            </div>
+
+            <div class="information-related">
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="poster">
+                  <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&strip=info&w=1024" />
+                </div>
+                <div class="data">
+                  <h3>DEPORTES</h3>
+                  <a href="notas.html">
+                    <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor 1fr - 300px -->
+    <div class="content-block-1fr-300">
+
+      <!-- Publicidad -->
+      <div id="skyscraper-left" class="content-ad-slot-skyscraper-left">
+        AD SLOT
+      </div>
+
+      <!-- Publicidad -->
+      <div id="skyscraper-right" class="content-ad-slot-skyscraper-right">
+        AD SLOT
+      </div>
+
+      <!-- Columna Izquierda -->
+      <div class="space-y-4">
+
+        <!-- Titulo -->
+        <div class="title">
+          <h2>
+            <span>PAIS</span>
+            <i class="text-red-600 fa-solid fa-angle-right px-2"></i>
+            DESTACAMOS
+          </h2>
+          <h3></h3>
+        </div>
+
+        <!-- Patrocinado -->
+        <div class="article-sponsored">
+          <div class="info">
+            <i class="fa-solid fa-circle-info"></i> Presentado por :
+          </div>
+          <div class="logo">
+            <img src="https://www.pngmart.com/files/3/Chevrolet-Logo-PNG-Transparent-Image.png" />
+          </div>
+        </div>
+
+        <!-- Detalles de el Articulo -->
+        <div class="article-details">
+
+          <!-- Titulo -->
+          <h1>Plan para este 18-O: Más de 25 mil carabineros, clases virtuales en liceos de Santiago y horarios especiales en transporte</h1>
+
+          <!-- Información -->
+          <div class="author">
+
+            <div class="picture">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR72aEsvFKoRJpfaWB4G1ftrlpe8tN5O6rPhigr1s7UmPYWxH3PeYE2Z1Gqmv8VnT8qtsc&usqp=CAU" />
+            </div>
+          
+            <div class="info">
+              <h2><a href="#">Por Jake Kwon</a></h2>
+              <h3>18.10.2022 - 07:32 hrs</h3>
+            </div>
+          
+            <div class="share-mobile">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+          
+            <div class="share">
+              <span>Compartir</span>
+              <i class="fa-brands fa-square-whatsapp"></i>
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+            </div>
+          
+          </div>
+          
+          <noscript>
+
+            <!-- Información -->
+            <div class="author only-date">
+
+              <div class="info col-span-2">
+                  <h3><i class="fa-solid fa-clock mr-2"></i> 18.10.2022 - 07:32 hrs</h3>
+              </div>
+
+              <div class="share-mobile">
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+
+              <div class="share">
+                  <span>Compartir</span>
+                  <i class="fa-brands fa-square-whatsapp"></i>
+                  <i class="fa-brands fa-square-facebook"></i>
+                  <i class="fa-brands fa-square-twitter"></i>
+              </div>
+
+            </div>
+
+          </noscript>
+
+          <!-- Contenido Multimedia -->
+          <div class="media">
+            <img src="https://media.cnnchile.com/sites/2/2022/05/Byron-Castillo-737x430.png" />
+          </div>
+
+          <!-- Epigrafé -->
+          <p class="epigraph">Este martes se conmemora el tercer aniversario del estallido social. Con el fin de evitar incidentes y problemas en servicios, autoridades y gremios han implementado planes de contingencia para la jornada. Desde el Gobierno llamaron a manifestarse de forma tranquila y respetando la seguridad y el orden público.</p>
+
+          <!-- Parrafo Destacado -->
+          <div class="quote quote-left">
+            <h2>
+              <i class="fa-solid fa-quote-left"></i>
+              La arriesgada jugada de Ana Lya Uriarte en la Cámara: De la caída de Cariola al triunfo de Mirosevic.
+              <i class="fa-solid fa-quote-right"></i>
+            </h2>
+            <h3>Valentín Trujillo Sánchez</h3>
+            <h4>2 de mayo de 1933</h4>
+          </div>
+
+          <!-- Parrafos -->
+          <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+          <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+          <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+          <!-- Contenido Multimedia video -->
+          <div class="media">
+            <iframe src="https://www.youtube.com/embed/AC7nnoFKZTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <!-- Epigrafé -->
+          <p class="epigraph">Este martes se conmemora el tercer aniversario del estallido social. Con el fin de evitar incidentes y problemas en servicios, autoridades y gremios han implementado planes de contingencia para la jornada. Desde el Gobierno llamaron a manifestarse de forma tranquila y respetando la seguridad y el orden público.</p>
+
+          <!-- Parrafo Destacado -->
+          <div class="quote quote-right">
+            <h2>
+              <i class="fa-solid fa-quote-left"></i>
+              La arriesgada jugada de Ana Lya Uriarte en la Cámara: De la caída de Cariola al triunfo de Mirosevic.
+              <i class="fa-solid fa-quote-right"></i>
+            </h2>
+            <h3>Valentín Trujillo Sánchez</h3>
+            <h4>2 de mayo de 1933</h4>
+          </div>
+
+          <!-- Parrafos -->
+          <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+          <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+          <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+          <!-- Contenido Externo -->
+          <div class="external">
+            <blockquote class="twitter-tweet"><p lang="es" dir="ltr">🔴 AHORA | Pdte. Boric se refiere al tercer aniversario del estallido social: “Ya es tiempo de que salgamos de nuestra zona de confort para interpretar lo que pasó, las lecciones que debemos sacar del proceso y actuar” <br><br>📡 En vivo: <a href="https://t.co/Esutw9Kn05">https://t.co/Esutw9Kn05</a> <a href="https://twitter.com/hashtag/NoticiasExpressCNN?src=hash&amp;ref_src=twsrc%5Etfw">#NoticiasExpressCNN</a> <a href="https://t.co/7x3GwIdsaO">pic.twitter.com/7x3GwIdsaO</a></p>&mdash; CNN Chile (@CNNChile) <a href="https://twitter.com/CNNChile/status/1582348858155147264?ref_src=twsrc%5Etfw">October 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <!-- Parrafos -->
+          <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+          <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+          <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+          <!-- Publicidad -->
+          <div class="ad-container">
+            AD SLOT
+          </div>
+
+          <!-- Parrafos -->
+          <p>El gobierno de Australia revocó la decisión de su predecesor de reconocer a Jerusalén Occidental como la capital de Israel, lo que provocó una reprimenda del gobierno israelí.</p>
+          <p>La ministra de Relaciones Exteriores de Australia, Penny Wong, reafirmó la “posición anterior y de larga data” de Canberra sobre Israel en una sesión informativa este martes, enfatizando el apoyo inquebrantable del nuevo gobierno laborista tanto a Israel como al pueblo palestino.</p>
+          <p>“Australia está comprometida con una solución de dos Estados en la que Israel y un futuro Estado de Palestina coexistan, en paz y seguridad, dentro de fronteras internacionalmente reconocidas”, dijo Wong. “No apoyaremos un enfoque que socave esta perspectiva”.</p>
+
+          <!-- Contenido Externo -->
+          <div class="external">
+            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Cj2wRl2N_GV/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/Cj2wRl2N_GV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Cj2wRl2N_GV/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Una publicación compartida de CHV Noticias (@chvnoticias)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+          </div>
+
+          <!-- Tags -->
+          <div class="tags">
+            <h2><i class="fa-solid fa-tag"></i> TAGS</h2>
+            <div class="item">18-O</div>
+            <div class="item">CNN AM</div>
+            <div class="item">ESTALLIDO SOCIAL</div>
+            <div class="item">JUAN CARLOS MUÑOZ</div>
+            <div class="item">TRANSPORTE</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="space-y-4">
+
+        <!-- Titulo -->
+        <div class="title">
+          <h2>RELACIONADOS</h2>
+          <h3>
+            <a href="notas.html">
+              VER MÁS <i class="fa-solid fa-circle-plus"></i>
+            </a>
+          </h3>
+        </div>
+
+        <!-- Notas Relacionadas -->
+        <div class="slider">
+
+          <div class="article-image slider-big-item aspect-square sm:aspect-video">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>REDES SOCIALES</span>
+                  <h2>Espalda rota, rodilla dislocada, tobillo torcido: lo que dejó Twitchcon</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011185432-twitchcon-injuries-foam-pit-lenovo-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+            </a>
+          </div>
+  
+          <div class="article-image slider-big-item aspect-square sm:aspect-video">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>CELEBRIDADES</span>
+                  <h2>Angela Lansbury, estrella de 'Murder, She Wrote', muere a los 96 años</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/CNN-Lansbury.jpeg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+            </a>
+          </div>
+          
+          <div class="article-image slider-big-item aspect-square sm:aspect-video">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>MEXICO</span>
+                  <h2>Mira al bebé cargado por la multitud hasta llegar a "The Rock"</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011131409-dwayne-johnson-with-crowd-surfed-baby-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+            </a>
+          </div>
+  
+          <div class="article-image slider-big-item aspect-square sm:aspect-video">
+            <a href="#">
+              <div class="background">
+                <article>
+                  <span>CELEBRIDADES</span>
+                  <h2>Madonna deja intrigados a muchos por un video suyo en TikTok</h2>
+                </article>
+              </div>
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221010154337-madonna-tiktok-gay-showbiz-00001330-full-169-e1665443221236.png?w=300&amp;h=170&amp;crop=1">
+            </a>
+          </div>
+  
+        </div>
+
+        <!-- Publicidad -->
+        <div class="flex h-[250px] bg-slate-300 text-slate-600 justify-center items-center">
+          300 x 250
+        </div>
+
+        <!-- Titulo -->
+        <div class="title">
+          <h2>DESTACAMOS</h2>
+          <h3></h3>
+        </div>
+
+        <!-- Destacado Oscuro -->
+        <div class="article-dark">
+          <figure>
+            <span>RECIENTES</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+            <p>Nintendo, la gigante empresa japonesa de desarrollo y distribución de videojuegos, hizo oficial este 6 de octubre el primer tráiler de la nueva película de animación.</p>
+          </article>
+        </div>
+
+        <!-- Titulo -->
+        <div class="title">
+          <h2>LO ÚLTIMO</h2>
+          <h3>
+            <a href="notas.html">
+              VER MÁS <i class="fa-solid fa-circle-plus"></i>
+            </a>
+          </h3>
+        </div>
+
+        <!-- Destacado -->
+        <div class="article border-bottom">
+          <figure>
+            <span>RECIENTES</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+          </article>
+        </div>
+
+        <!-- Listado de Noticias-->
+        <div class="article-list">
+
+          <div class="item poster border-bottom">
+            <figure>
+              <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+            </figure>
+            <article>
+              <h3>DEPORTES</h3>
+              <a href="notas.html">
+                <h2>Biden da los primeros pasos hacia la despenalización de la marihuana</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster border-bottom">
+            <figure class="aspect-video">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005125038-01-hurricane-ian-cleanup-cec.jpg?quality=100&amp;strip=info&amp;w=1024">
+            </figure>
+            <article>
+              <h3>INMIGRACIÓN</h3>
+              <a href="notas.html">
+                <h2>Trabajadores inmigrantes ayudan a la recuperación en Florida</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster border-bottom">
+            <figure class="aspect-video">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/220914153602-gasoline-nozzle-new-york-file-081122-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+            </figure>
+            <article>
+              <h3>ECONOMÍA</h3>
+              <a href="notas.html">
+                <h2>Nuevos aumentos en el precio de la gasolina en EE.UU.</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster border-bottom">
+            <figure class="aspect-video">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221006132439-clix-3-full-169.jpg?quality=100&amp;strip=info&amp;w=352&amp;h=199&amp;crop=1">
+            </figure>
+            <article>
+              <h3>AUTOS</h3>
+              <a href="notas.html">
+                <h2>Desarrollan camiones mineros de cero emisiones</h2>
+              </a>
+            </article>
+          </div>
+
+          <div class="item poster border-bottom">
+            <figure class="aspect-video">
+              <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+            </figure>
+            <article>
+              <h3>AUTOS</h3>
+              <a href="notas.html">
+                <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+              </a>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- Publicidad -->
+        <div class="flex h-[250px] bg-slate-300 text-slate-600 justify-center items-center">
+          300 x 250
+        </div>
+
+      </div>
+      
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot hidden sm:block">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Bloque de Programas -->
+    <div class="content">
+
+      <!-- Titulo -->
+      <div class="title">
+        <h2>PROGRAMAS DE TV</h2>
+        <h3>
+          <a href="notas.html">
+            VER MÁS <i class="fa-solid fa-circle-plus"></i>
+          </a>
+        </h3>
+      </div>
+
+      <!-- Programas -->
+      <div class="tv-shows">
+
+        <div class="show">
+          <h2>TOLERANCIA CERO</h2>
+          <h4><i class="fa-regular fa-clock"></i> DOMINGOS 22:30</h4>
+          <img src="https://pbs.twimg.com/profile_images/1348750511592321033/W0DYIgzG_400x400.jpg" />
+          <h3>Daniel Matamala</h3>
+        </div>
+
+        <div class="show">
+          <h2>AQUÍ SE DEBATE</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 22:30</h4>
+          <img src="http://1.bp.blogspot.com/_d_IZbuJtMRU/S5pAlWsrV1I/AAAAAAAABQo/swoYaPcpdlw/s400/rincon2.jpg" />
+          <h3>Monica Rincón</h3>
+        </div>
+
+        <div class="show">
+          <h2>HOY ES NOTICIA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MARTES Y JUEVES 19:00</h4>
+          <img src="https://pbs.twimg.com/profile_images/1279061223955406854/RT7NZlvI_400x400.jpg" />
+          <h3>Matilde Burgos</h3>
+        </div>
+
+        <div class="show">
+          <h2>ÚLTIMA MIRADA</h2>
+          <h4><i class="fa-regular fa-clock"></i> LUNES A VIERNES 23:30</h4>
+          <img src="https://s3.amazonaws.com/storage.wobiz.com/9/9041/images/Large/1467306198_96647b11b71854455f2250e1d54736c1.9041.jpeg" />
+          <h3>Fernando Paulsen</h3>
+        </div>
+
+        <div class="show">
+          <h2>AGENDA ECONÓMICA</h2>
+          <h4><i class="fa-regular fa-clock"></i> MIERCOLES 18:00</h4>
+          <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHeiDI3da2w6w/profile-displayphoto-shrink_200_200/0/1625593808730?e=1669248000&v=beta&t=agseGgn4tlayqDkIHI5eia4Raa1OqI7RGPDlnF7Rk9o" />
+          <h3>Nicolás Paut</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <div class="content">
+
+      <div class="logo">
+        <div class="logo-line"></div>
+        <div class="logo-image">
+          <a href="index.html">
+            <img src="/image/cnn.png" />
+          </a>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <li>
+          <a href="categorias.html">Politíca</a>
+        </li>
+        <li>
+          <a href="categorias.html">País</a>
+        </li>
+        <li>
+          <a href="categorias.html">Mundo</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Economía</a>
+        </li>
+        <li>
+          <a href="categorias.html">Miradas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Entretención</a>
+        </li>
+        <li>
+          <a href="categorias.html">Cultura</a>
+        </li>
+        <li>
+          <a href="categorias.html">Deportes</a>
+        </li>
+        <li>
+          <a href="categorias.html">Tendencias</a>
+        </li>
+        <li>
+          <a href="categorias.html">Programas</a>
+        </li>
+        <li>
+          <a href="categorias.html">Especiales</a>
+        </li>
+      </nav>
+
+      <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="description">
+        © 2022 Cable News Network. A Warner Media Company. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- Base Script -->
+  <script type="text/javascript" src='/cnn.js'></script>
+
+</body>
+
+</html>
