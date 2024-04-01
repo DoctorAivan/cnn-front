@@ -27,12 +27,20 @@
         </a>
       </div>
       <div class="on-air" onclick="liveStatus()">
-        <i class="fa-solid fa-display"></i>
+        <span>En&nbsp;vivo</span>
+        <i class="fa-solid fa-circle-play"></i>
       </div>
     </div>
 
     <!-- Menu Movil Contenido -->
     <div class="mobile-content" id="mobile-menu-content">
+
+      <div class="search">
+        <input type="text" placeholder="Buscar" />
+        <div class="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
 
       <nav class="menu">
         <div class="item">
@@ -99,6 +107,9 @@
           <a href="portadas.html">Portadas</a>
         </li>
         <li>
+          <a href="programas.html">Programa</a>
+        </li>
+        <li>
           <a href="categorias.html">País</a>
         </li>
         <li>
@@ -122,9 +133,6 @@
         <li>
           <a href="categorias.html">Deportes</a>
         </li>
-        <li>
-          <a href="categorias.html">Programas</a>
-        </li>
       </nav>
 
       <div class="on-air" onclick="liveStatus()">
@@ -132,7 +140,20 @@
         <span>En vivo</span>
       </div>
 
-      <div class="search">
+      <div id="desktop-search-ui" class="search-ui">
+        <form action="#">
+          <div class="search-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="appearance-none" type="text" name="s" placeholder="Buscar..." />
+          </div>
+          <button type="submit" class="search-button">Buscar</button>
+          <div onclick="seach_ui()" class="search-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </form>
+      </div>
+
+      <div onclick="seach_ui()" class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 
@@ -167,7 +188,7 @@
       </div>
     </div>
     
-    <!-- En vivo Gris collapse h-0 -->
+    <!-- En vivo -->
     <div class="content-on-air collapse h-0" id="live">
       <div class="content-on-air-bg">
         <div class="content-on-air-bg-grid">
@@ -226,6 +247,17 @@
       </div>
     </div>
 
+    <!-- Imagen Principal del Header -->
+    <div class="image-section">
+
+      <!-- Imagen Desktop -->
+      <div class="desktop" style="background-image: url('https://wallpaperaccess.com/full/366398.jpg')"></div>
+
+      <!-- Imagen Movil -->
+      <div class="mobile" style="background-image: url('https://wallpaperaccess.com/full/366398.jpg')"></div>
+
+    </div>
+
     <!-- Titulo Sección -->
     <div class="title-section">
       <div class="content">
@@ -244,7 +276,7 @@
         <div class="data">
 
           <div class="name">
-            <i class="fa-solid fa-tag"></i> MAGAZINE
+            <i class="fa-solid fa-tag"></i> TOLERANCIA CERO
           </div>
 
           <div class="icon-mobile">
@@ -259,221 +291,335 @@
           </div>
 
         </div>
-        
+
+        <!-- Menu -->
+        <div class="menu">
+          <a href="#">ANIME Y MANGA</a>
+          <a href="#">TECNOLOGÍA</a>
+          <a href="#">VIDEOJUEGOS</a>
+          <a href="#">CULTURA POP</a>
+          <a href="#">PODCAST</a>
+        </div>
+
       </div>
     </div>
 
     <!-- Contenedor 1fr - 300px -->
     <div class="content-block-1fr-300">
 
-      <!-- Listado de Noticias-->
-      <div class="article-list">
+      <!-- Destacado Principal -->
+      <div class="article">
+        <figure class="aspect-video">
+          <span>UCRANIA</span>
+          <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221003140825-risk-takers-4dww-2-full-169.jpg?quality=100&strip=info&w=780&h=438&crop=1" />
+        </figure>
+        <article class="big sm:pt-1">
+          <a href="notas.html">
+            <h2>La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</h2>
+          </a>
+          <p>El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.</p>
+        </article>
+      </div>
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
+      <!-- Columna Izquierda -->
+      <div class="space-y-4">
 
         <!-- Publicidad -->
-        <div class="border-b border-zinc-200 pb-4">
-          <div class="flex h-[50px] sm:h-[90px] bg-slate-300 text-slate-600 justify-center items-center">
-            AD SLOT
+        <div class="flex h-[250px] bg-slate-300 text-slate-600 justify-center items-center">
+          300 x 250
+        </div>
+
+        <!-- Destacado Oscuro -->
+        <div class="article-dark">
+          <figure>
+            <span>RECIENTES</span>
+            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&strip=info&w=1024" />
+          </figure>
+          <article class="medium">
+            <a href="notas.html">
+              <h2>Un premio a la paz en tiempos de guerra. ¿Quién ganará el Nobel a la Paz?</h2>
+            </a>
+            <p class="!line-clamp-2">Nintendo, la gigante empresa japonesa de desarrollo y distribución de videojuegos, hizo oficial este 6 de octubre el primer tráiler de la nueva película de animación.</p>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Publicidad -->
+    <div class="content-ad-slot">
+      <div class="slot">
+        AD SLOT
+      </div>
+    </div>
+
+    <!-- Contenedor 1fr - 300px -->
+    <div class="content-block-1fr-300">
+
+      <!-- Columna Izquierda -->
+      <div class="space-y-4">
+
+        <div class="space-y-4">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>VIDEOJUEGOS</h2>
+            <h3>
+              <a href="notas.html">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
           </div>
-        </div>
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
+          <!-- Listado de Notas-->
+          <div class="content-block-3 slider">
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>REDES SOCIALES</span>
+                    <h2>Espalda rota, rodilla dislocada, tobillo torcido: lo que dejó Twitchcon</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011185432-twitchcon-injuries-foam-pit-lenovo-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>CELEBRIDADES</span>
+                    <h2>Angela Lansbury, estrella de 'Murder, She Wrote', muere a los 96 años</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/CNN-Lansbury.jpeg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+            
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>MEXICO</span>
+                    <h2>Mira al bebé cargado por la multitud hasta llegar a "The Rock"</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011131409-dwayne-johnson-with-crowd-surfed-baby-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>CELEBRIDADES</span>
+                    <h2>Madonna deja intrigados a muchos por un video suyo en TikTok</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221010154337-madonna-tiktok-gay-showbiz-00001330-full-169-e1665443221236.png?w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <!-- Publicidad -->
-        <div class="border-b border-zinc-200 pb-4">
-          <div class="flex h-[50px] sm:h-[90px] bg-slate-300 text-slate-600 justify-center items-center">
-            AD SLOT
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>REDES SOCIALES</span>
+                    <h2>Espalda rota, rodilla dislocada, tobillo torcido: lo que dejó Twitchcon</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221011185432-twitchcon-injuries-foam-pit-lenovo-full-169.jpg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
+            <div class="article-image slider-big-item aspect-square">
+              <a href="#">
+                <div class="background">
+                  <article>
+                    <span>CELEBRIDADES</span>
+                    <h2>Angela Lansbury, estrella de 'Murder, She Wrote', muere a los 96 años</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/CNN-Lansbury.jpeg?quality=100&amp;strip=info&amp;w=300&amp;h=170&amp;crop=1">
+              </a>
+            </div>
+    
           </div>
+
         </div>
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
+        <div class="space-y-4">
 
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <div class="item section border-bottom">
-          <figure>
-            <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
-          </figure>
-          <article>
-            <h4>14-10-2022 21:15</h4>
-            <h2>
-              <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
-            </h2>
-            <p>
-              El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
-            </p>
-          </article>
-        </div>
-
-        <!-- Paginación -->
-        <div class="pagination">
-          <div class="totals"><i class="fa-regular fa-file"></i> Página 2 de 62</div>
-          <div class="button">
-            <i class="fa-solid fa-angle-left"></i>
-            <span>Anterior</span>
+          <!-- Titulo -->
+          <div class="title">
+            <h2>ANIME Y MANGA</h2>
+            <h3>
+              <a href="notas.html">
+                VER MÁS <i class="fa-solid fa-circle-plus"></i>
+              </a>
+            </h3>
           </div>
-          <div class="button">
-            <span>Siguiente</span>
-            <i class="fa-solid fa-angle-right"></i>
+
+          <!-- Listado de Notas-->
+          <div class="article-list">
+
+            <div class="item section border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+              </figure>
+              <article>
+                <h4>14-10-2022 21:15</h4>
+                <h2>
+                  <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
+                </h2>
+                <p>
+                  El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
+                </p>
+              </article>
+            </div>
+
+            <div class="item section border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+              </figure>
+              <article>
+                <h4>14-10-2022 21:15</h4>
+                <h2>
+                  <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
+                </h2>
+                <p>
+                  El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
+                </p>
+              </article>
+            </div>
+
+            <div class="item section border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+              </figure>
+              <article>
+                <h4>14-10-2022 21:15</h4>
+                <h2>
+                  <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
+                </h2>
+                <p>
+                  El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
+                </p>
+              </article>
+            </div>
+
+            <div class="item section border-bottom">
+              <figure>
+                <img src="https://cdn.cnn.com/cnnnext/dam/assets/220113000714-03-coumboscuro-concert-large-169.jpg">
+              </figure>
+              <article>
+                <h4>14-10-2022 21:15</h4>
+                <h2>
+                  <a href="notas.html">La advertencia severa de Biden sobre un 'armagedón' por las armas nucleares</a>
+                </h2>
+                <p>
+                  El presidente de Estados Unidos, Joe Biden, emitió el jueves una severa advertencia sobre los peligros detrás de las amenazas nucleares del presidente ruso, Vladimir Putin, mientras Moscú continúa enfrentando reveses militares en Ucrania.
+                </p>
+              </article>
+            </div>
+
           </div>
+
+        </div>
+
+        <div class="space-y-4">
+
+          <!-- Titulo -->
+          <div class="title">
+            <h2>DESTACAMOS</h2>
+            <h3></h3>
+          </div>
+
+          <!-- Bloque 2 Notas -->
+          <div class="content-block-2">
+
+            <div class="article-image">
+              <a href="#">
+                <div class="background medium">
+                  <article>
+                    <span>GUERRA</span>
+                    <h2>Lo que revela el primer tráiler oficial de 'The Super Mario Bros. Movie'</h2>
+                  </article>
+                </div>
+                <img class="aspect-video" src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/221005124936-zelensky-navalny-tsikhanouskaya-split.jpg?quality=100&amp;strip=info&amp;w=1024">
+              </a>
+            </div>
+  
+            <div class="article-image">
+              <a href="#">
+                <div class="background medium">
+                  <article>
+                    <span>GUERRA</span>
+                    <h2>Precios del gas afectan al Balneario Miskolc Tapolca en Hungría</h2>
+                  </article>
+                </div>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/140626072101-hungary-spas-full-169.jpg?quality=100&amp;strip=info&amp;w=780&amp;h=438&amp;crop=1">
+              </a>
+            </div>
+  
+          </div>
+
+          <!-- Bloque 4 Notas -->
+          <div class="content-block-4 slider">
+
+            <div class="article slider-item">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&amp;strip=info&amp;w=460&amp;h=260&amp;crop=1">
+              </figure>
+              <article class="small">
+                <h3>LITERATURA</h3>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+  
+            <div class="article slider-item">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&amp;strip=info&amp;w=460&amp;h=260&amp;crop=1">
+              </figure>
+              <article class="small">
+                <h3>LITERATURA</h3>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+  
+            <div class="article slider-item">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&amp;strip=info&amp;w=460&amp;h=260&amp;crop=1">
+              </figure>
+              <article class="small">
+                <h3>LITERATURA</h3>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+  
+            <div class="article slider-item">
+              <figure>
+                <img src="https://cnnespanol.cnn.com/wp-content/uploads/2022/10/Ucrania-jueves.jpg?quality=100&amp;strip=info&amp;w=460&amp;h=260&amp;crop=1">
+              </figure>
+              <article class="small">
+                <h3>LITERATURA</h3>
+                <a href="notas.html">
+                  <h2>El duro mensaje de Zelensky en la OEA a los países que no apoyan a Ucrania</h2>
+                </a>
+              </article>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -595,7 +741,7 @@
         </div>
 
       </div>
-
+      
     </div>
 
     <!-- Publicidad -->

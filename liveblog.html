@@ -27,12 +27,20 @@
         </a>
       </div>
       <div class="on-air" onclick="liveStatus()">
-        <i class="fa-solid fa-display"></i>
+        <span>En&nbsp;vivo</span>
+        <i class="fa-solid fa-circle-play"></i>
       </div>
     </div>
 
     <!-- Menu Movil Contenido -->
     <div class="mobile-content" id="mobile-menu-content">
+
+      <div class="search">
+        <input type="text" placeholder="Buscar" />
+        <div class="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
 
       <nav class="menu">
         <div class="item">
@@ -99,6 +107,9 @@
           <a href="portadas.html">Portadas</a>
         </li>
         <li>
+          <a href="programas.html">Programa</a>
+        </li>
+        <li>
           <a href="categorias.html">País</a>
         </li>
         <li>
@@ -122,9 +133,6 @@
         <li>
           <a href="categorias.html">Deportes</a>
         </li>
-        <li>
-          <a href="categorias.html">Programas</a>
-        </li>
       </nav>
 
       <div class="on-air" onclick="liveStatus()">
@@ -132,7 +140,20 @@
         <span>En vivo</span>
       </div>
 
-      <div class="search">
+      <div id="desktop-search-ui" class="search-ui">
+        <form action="#">
+          <div class="search-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="appearance-none" type="text" name="s" placeholder="Buscar..." />
+          </div>
+          <button type="submit" class="search-button">Buscar</button>
+          <div onclick="seach_ui()" class="search-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </form>
+      </div>
+
+      <div onclick="seach_ui()" class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 
@@ -227,8 +248,7 @@
     </div>
 
     <!-- Titulo Sección -->
-    <div class="title-section">
-      <div class="content">
+    <div class="content">
 
         <!-- Publicidad -->
         <div id="skyscraper-left" class="content-ad-slot-skyscraper-left">
@@ -240,27 +260,12 @@
           AD SLOT
         </div>
 
-        <!-- Información -->
-        <div class="data">
-
-          <div class="name">
-            <i class="fa-solid fa-circle animate-alarm"></i> MINUTO A MINUTO
-          </div>
-
-          <div class="icon-mobile">
-            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-          </div>
-
-          <div class="icon">
-            <span>Compartir</span>
-            <i class="fa-brands fa-square-whatsapp"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-twitter"></i>
-          </div>
-
+        <!-- Titulo -->
+        <div class="title">
+          <h2>MINUTO A MINUTO</h2>
+          <h3>ACTUALIZAR <i class="fa-solid fa-rotate-right"></i></h3>
         </div>
 
-      </div>
     </div>
 
     <!-- Live Blog -->
@@ -268,6 +273,7 @@
 
       <div class="live-blog-bg">
         <div class="live-blog-content">
+
           <div class="article-details mr-5">
             <h3>Joe Biden asegura tener intención de postularse a la reelección en 2024</h3>
             <p class="epigraph line-clamp-4">En entrevista, el actual Mandatario manifestó que si buen "no ha tomado esa decisión formalmente" tiene la energía para cumplir con un segundo periodo.</p>
@@ -291,11 +297,11 @@
       <div class="relative content-block-300-1fr pt-5">
 
         <!-- Columna Derecha -->
-        <div class="space-y-4 order-2 sm:order-1">
+        <div class="space-y-4 order-2 sm:order-1 mx-4 sm:mx-0">
 
           <!-- Titulo -->
           <div class="title">
-            <h2><i class="fa-solid fa-bookmark"></i> LO QUE SABEMOS</h2>
+            <h2>LO QUE SABEMOS</h2>
             <h3></h3>
           </div>
 
@@ -492,9 +498,24 @@
         <div class="space-y-4 order-1 sm:order-2 pb-5">
 
           <!-- Titulo -->
-          <div class="title">
-            <h2><i class="fa-regular fa-clipboard"></i> ARTICULOS: 15</h2>
-            <h3>ACTUALIZAR <i class="fa-solid fa-rotate-right"></i></h3>
+          <div class="sm:!hidden mx-4 title">
+            <h2>LO QUE SABEMOS</h2>
+            <h3></h3>
+          </div>
+
+          <!-- Contenido -->
+          <div class="sm:hidden article-details live-blog-item">
+            <ul>
+              <li>Si fuera reelecto, terminaría su segundo mandato con 86 años.</li>
+              <li>"Mi esposa cree que estamos haciendo algo muy importante y que no debería negarme ( a postularme nuevamente )"</li>
+              <li>Tras la visita del secretario de Estado norteamericano, Antony Blinken, se activaron los preparativos para conmemorar el hito, con actividades culturales y comerciales tanto en Washington como en Santiago.</li>
+            </ul>
+          </div>
+
+          <!-- Titulo -->
+          <div class="title mx-4 sm:!mt-0 sm:mx-0">
+            <h2>ARTICULOS</h2>
+            <h3>15 NOTAS</h3>
           </div>
 
           <div class="article-details live-blog-item">
@@ -538,6 +559,13 @@
               <li>Los soldados rusos se han quejado de haber sido enviados a una "batalla incomprensible" en la región de Donetsk. El presidente de Ucrania, Volodymyr Zelensky, dijo que Moscú había sufrido grandes pérdidas en la región oriental.</li>
               <li>El Estado Mayor General de las Fuerzas Armadas dijo este martes que "el enemigo continúa recurriendo al saqueo y la destrucción de la infraestructura civil en los territorios temporalmente ocupados de la región de Jersón".</li>
             </ul>
+
+            <div class="share-now">
+              <span>Compartir</span>
+              <i class="fa-brands fa-square-whatsapp"></i>
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+            </div>
 
           </div>
 

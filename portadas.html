@@ -27,12 +27,20 @@
         </a>
       </div>
       <div class="on-air" onclick="liveStatus()">
-        <i class="fa-solid fa-display"></i>
+        <span>En&nbsp;vivo</span>
+        <i class="fa-solid fa-circle-play"></i>
       </div>
     </div>
 
     <!-- Menu Movil Contenido -->
     <div class="mobile-content" id="mobile-menu-content">
+
+      <div class="search">
+        <input type="text" placeholder="Buscar" />
+        <div class="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
 
       <nav class="menu">
         <div class="item">
@@ -99,6 +107,9 @@
           <a href="portadas.html">Portadas</a>
         </li>
         <li>
+          <a href="programas.html">Programa</a>
+        </li>
+        <li>
           <a href="categorias.html">País</a>
         </li>
         <li>
@@ -122,9 +133,6 @@
         <li>
           <a href="categorias.html">Deportes</a>
         </li>
-        <li>
-          <a href="categorias.html">Programas</a>
-        </li>
       </nav>
 
       <div class="on-air" onclick="liveStatus()">
@@ -132,7 +140,20 @@
         <span>En vivo</span>
       </div>
 
-      <div class="search">
+      <div id="desktop-search-ui" class="search-ui">
+        <form action="#">
+          <div class="search-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="appearance-none" type="text" name="s" placeholder="Buscar..." />
+          </div>
+          <button type="submit" class="search-button">Buscar</button>
+          <div onclick="seach_ui()" class="search-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </form>
+      </div>
+
+      <div onclick="seach_ui()" class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 
@@ -143,8 +164,25 @@
   <!-- Main -->
   <main id="main">
 
+    <!-- Barra Breaking News -->
+    <div class="breaking-news">
+      <a href="liveblog.html">
+        <div class="breaking-news-content">
+          <div class="read">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="breaking">
+            <i class="fa-solid fa-circle-exclamation"></i> <span>BREAKING NEWS</span>
+          </div>
+          <div class="description">
+            Joe Biden asegura tener intención de postularse a la reelección en 2024
+          </div>
+        </div>
+      </a>
+    </div>
+
     <!-- Publicidad -->
-    <div class="content-ad-slot -mb-5">
+    <div class="content-ad-slot !-mb-5">
       <div class="slot">
         AD SLOT
       </div>
@@ -211,12 +249,12 @@
 
     <!-- Imagen Principal del Header -->
     <div class="image-section">
-      
+
       <!-- Imagen Desktop -->
-      <img class="desktop" src="https://www.cnnchile.com/_templates/desktop/includes/img//bits/common-header.png" />
+      <div class="desktop" style="background-image: url('https://wallpaperaccess.com/full/366398.jpg')"></div>
 
       <!-- Imagen Movil -->
-      <img class="mobile" src="https://www.cnnchile.com/_templates/desktop/includes/img//style/common-header.png" />
+      <div class="mobile" style="background-image: url('https://wallpaperaccess.com/full/366398.jpg')"></div>
 
     </div>
 

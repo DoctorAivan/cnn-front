@@ -80,7 +80,7 @@
 body
 {
     @apply
-    bg-black font-cnn-sd-light
+    bg-red-600 sm:bg-black font-cnn-sd-light
 }
 /*
 
@@ -90,8 +90,8 @@ header
 {
     @apply
     fixed w-full z-20 top-0 h-[50px] sm:mx-auto
-    bg-black
-    shadow-xl shadow-slate-600/10
+    bg-red-600 sm:bg-black
+    shadow-xl shadow-slate-500/10
 }
     header .desktop
     {
@@ -106,7 +106,7 @@ header
             header .desktop .logo img
             {
                 @apply
-                h-[50px] px-5 pt-1 pb-4 sm:px-4 sm:py-3
+                h-[50px] px-5 pt-1 pb-4 sm:px-3 sm:py-3
             }
         header .desktop .menu
         {
@@ -198,37 +198,27 @@ header
     header .mobile
     {
         @apply
-        relative lg:hidden h-[50px] grid gap-7 grid-cols-[auto_1fr_auto] mx-5 justify-center items-center
+        relative lg:hidden h-[50px] grid gap-7 grid-cols-[auto_1fr_auto] mx-5
     }
         header .mobile i
         {
             @apply
-            text-white text-xl
+            text-white text-xl mt-1.5
         }
         header .mobile .logo
         {
             @apply
-            h-auto bg-red-600 mx-auto rounded-tl-xl rounded-tr-lg
+            h-auto bg-red-600 mx-auto
         }
             header .mobile .logo img
             {
                 @apply
-                h-[50px] px-5 py-3 sm:px-3 sm:py-2
-            }
-        header .mobile .on-air
-        {
-            @apply
-            relative
-        }
-            header .mobile .on-air span
-            {
-                @apply
-                absolute text-white text-sm -left-14 pr-1 top-1
+                h-[50px] px-5 pt-1 pb-4 sm:px-3 sm:py-3
             }
         header .mobile-content
         {
             @apply
-            hidden relative pt-8 pb-40 space-y-6 h-screen overflow-auto bg-zinc-800/95
+            hidden relative pt-8 pb-40 space-y-6 h-screen overflow-auto bg-zinc-900/95
         }
             header .mobile-content .search
             {
@@ -287,7 +277,7 @@ header
             header .mobile-content .description
             {
                 @apply
-                mx-12 pb-2 text-center text-sm font-light leading-relaxed text-zinc-400
+                mx-12 pb-2 text-center text-sm font-light leading-relaxed text-zinc-500
             }
 /*
 
@@ -301,12 +291,12 @@ main
     main .content-block-auto-1fr
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-[auto_1fr]
+        grid gap-5 grid-cols-[auto_1fr]
     }
     main .content-block-1fr-1fr
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-2
+        grid gap-5 grid-cols-2
     }
     main .content-block-2
     {
@@ -316,7 +306,7 @@ main
     main .content-block-3
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-3
+        grid gap-5 grid-cols-1 sm:grid-cols-3
     }
     main .content-block-4
     {
@@ -332,21 +322,22 @@ main
     main .content-block-1fr-300-300
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-1 w-full
+        grid gap-5 grid-cols-1 w-full
         md:grid-cols-[1fr_1fr_1fr] md:w-full
         lg:grid-cols-[1fr_300px_300px]
         lg:w-[1100px] lg:mx-auto
+        relative
     }
     main .content-block-300-1fr
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-[300px_1fr]
+        grid gap-4 grid-cols-1 sm:grid-cols-[300px_1fr]
         lg:w-[1100px] sm:mx-auto
     }
     main .content-block-1fr-300
     {
         @apply
-        grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-[1fr_300px]
+        grid gap-4 grid-cols-1 sm:grid-cols-[1fr_300px]
         lg:w-[1100px] mx-4 sm:mx-auto
     }
 /*
@@ -403,10 +394,11 @@ main
         relative
         -mt-5 z-10
         font-cnn-sd-regular sm:font-cnn-sd-light text-white
-        py-3.5 sm:py-3
+        py-4 sm:py-3
         uppercase
         bg-gradient-to-t
-        from-red-500 to-red-600
+        from-slate-800 to-slate-900
+        sm:from-red-500 sm:to-red-600
         shadow-xl shadow-slate-500/10
     }
         main .breaking-news-content
@@ -414,7 +406,7 @@ main
             @apply
             relative
             w-auto lg:w-[1100px] mx-4 sm:mx-auto
-            pl-2 pr-12
+            px-2
             sm:px-0
             grid sm:gap-6 grid-cols-1 sm:grid-cols-[auto_1fr]
             animate-alarm
@@ -424,13 +416,14 @@ main
             {
                 @apply
                 sm:hidden
-                absolute top-5 right-0
-                text-2xl
+                absolute top-0 right-0
+                text-xl
             }
             main .breaking-news .breaking
             {
                 @apply
                 text-xl sm:text-base
+                mb-1 sm:mb-0
             }
                 main .breaking-news i
                 {
@@ -442,11 +435,6 @@ main
                     @apply
                     font-cnn-sd-bold
                 }
-            main .breaking-news .description
-            {
-                @apply
-                text-sm sm:text-base leading-relaxed
-            }
 /*
 
     
@@ -659,11 +647,6 @@ main
                 @apply
                 object-cover h-full sm:w-full
             }
-            main .article-dark figure iframe
-            {
-                @apply
-                object-cover h-full w-full
-            }
         main .article-dark article
         {
             @apply
@@ -822,7 +805,7 @@ main
             {
                 @apply
                 font-serif
-                text-xl leading-snug
+                text-xl leading-normal
                 sm:text-2xl sm:leading-normal
                 text-slate-800
             }
@@ -844,14 +827,14 @@ main
             main .article-details .quote h3
             {
                 @apply
-                !mt-2 sm:!mt-2.5
+                !mt-2.5
                 font-cnn-sd-regular text-sm sm:text-base leading-normal
                 text-slate-500
             }
             main .article-details .quote h4
             {
                 @apply
-                !mt-2 sm:!mt-1
+                !mt-1
                 font-cnn-sd-thin text-sm sm:text-base leading-normal
                 text-slate-500
             }
@@ -879,17 +862,17 @@ main
                 main .article-details .author .info h2
                 {
                     @apply
-                    font-cnn-s-medium text-base text-red-600 pb-0.5 !mt-0
+                    font-cnn-s-medium text-base text-red-600
                 }
                 main .article-details .author .info h3
                 {
                     @apply
-                    font-cnn-s-light text-zinc-500 text-sm !my-0
+                    text-zinc-500 text-sm font-light
                 }
                 main .article-details .only-date .info h3
                 {
                     @apply
-                    text-red-600 font-cnn-s-light text-base !mb-0
+                    text-red-600 font-cnn-s-light text-base
                 }
             main .article-details .author .share
             {
@@ -1000,18 +983,6 @@ main
                 @apply
                 rounded-xl bg-slate-200 hover:bg-red-600 hover:text-white px-4 py-2
             }
-            main .article-details .share-now
-            {
-                @apply
-                flex space-x-6
-                border-t border-t-zinc-100
-                pt-4 text-zinc-500 text-sm
-            }
-                main .article-details .share-now .fa-brands
-                {
-                    @apply
-                    text-sm
-                }
 /*
 
     
@@ -1264,7 +1235,7 @@ main
     {
         @apply
         relative w-full flex gap-4 snap-x snap-mandatory overflow-x-auto
-        sm:grid
+        sm:grid sm:gap-4 
     }
         main .slider-item
         {
@@ -1292,6 +1263,11 @@ main
             @apply
             font-cnn-sc-bold leading-none pb-3 border-b-[3px] border-red-600 text-lg font-semibold tracking-wider uppercase
         }
+            main .title h2 i
+            {
+                @apply
+                mr-2
+            }
             main .title h2 span
             {
                 @apply
@@ -1324,7 +1300,7 @@ main
     main .title-section
     {
         @apply
-        bg-gradient-to-b from-slate-100 to-slate-100/0 pt-5
+        bg-gradient-to-b from-slate-100 to-slate-100/0 pt-4
     }
         main .title-section .data
         {
@@ -1447,12 +1423,12 @@ main
         main .image-section .desktop
         {
             @apply
-            w-full h-[250px] bg-cover bg-center hidden sm:block
+            w-full hidden sm:block
         }
         main .image-section .mobile
         {
             @apply
-            w-full h-[200px] bg-cover bg-center sm:hidden
+            w-full sm:hidden
         }
 /*
 
